@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div class="pageBody">
+  <h2>データ表示</h2>
+<!--
+    <div class="DataList">
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>ファイル名</th>
+          <th>作成名</th>
+        </tr>
+        <tr>
+          <td>{{ data.id }}</td>
+          <td>{{ data.filename }}</td>
+          <td>{{ data.createdAt }}</td>
+        </tr>
+      </table>
+    </div>
+-->
+    <div class="DataList">
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>性別</th>
+          <th>コメント</th>
+        </tr>
+
+        <tr *ngFor ="let data of dataList">
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.sex }}</td>
+          <td>{{ data.comment }}</td>
+        </tr>
+      </table>
+    </div>
+
+
+</div>
